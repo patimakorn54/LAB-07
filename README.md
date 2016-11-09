@@ -725,4 +725,95 @@ The sine of       6.00 = -0.279415         *
 2.	y = cos(x)
 3.	y = tan(x)
 ```
+```
+1.	y = x2
+```
+```
+code
+```
+```
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(i * i) + "*", i, i * i);
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val) + 10);
+        return SpaceString;
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture6_1.JPG?raw=true)
+
+
+
+```
+2.	y = cos(x)
+```
+```
+code
+```
+```
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val * 5.0) + 10);
+        return SpaceString;
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture6_2.JPG?raw=true)
+
+
+
+```
+3.	y = tan(x)
+```
+```
+code
+```
+```
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Tan(i)) + "*", i, Math.Tan(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val) + 25);
+        return SpaceString;
+    }
+}
+```
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture6_3.JPG?raw=true)
+
 	
