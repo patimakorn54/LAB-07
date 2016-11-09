@@ -144,6 +144,7 @@ namespace variableProperties
 }
 ```
 
+
 ผลการทดลอง
 
 
@@ -214,6 +215,35 @@ namespace RandomNumber
 1. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
 
 1. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
+
+ผลการทดลอง
+```
+Code
+```
+```
+using System;
+namespace RandomNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(0, 9);
+            Console.WriteLine("Random  : ? " );
+            int c = randomNumber;
+            Console.WriteLine("Insert Number 0-9 : " );
+            int b = Convert.ToInt32(Console.ReadLine());
+            bool d = c >= b;
+            Console.WriteLine(" {0} > {1} ", c, b);
+            Console.WriteLine("Boolean : " + d);
+        }
+    }
+}
+```
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture2.JPG?raw=true)
+
 
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
@@ -306,6 +336,121 @@ namespace thruthTable
 5. NOR
 6. Exclusive OR
 ```
+```
+code
+```
+```
+using System;
+namespace thruthTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool A, B, Y;
+            Console.WriteLine("      Y = A AND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+
+            Console.WriteLine("*********************************");
+
+
+            Console.WriteLine("      Y = A OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("*********************************");
+
+
+            Console.WriteLine("      Y = A NOT B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; Y = !A;
+            Console.WriteLine(" {0}\t| {1}", A,Y);
+            A = true; Y = !A;
+            Console.WriteLine(" {0}\t| {1}", A,Y);          
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("*********************************");
+
+
+            Console.WriteLine("      Y = A NAND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = ! (A  & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("*********************************");
+
+            Console.WriteLine("      Y = A NOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+
+            Console.WriteLine("*********************************");
+
+            Console.WriteLine("      Y = A XOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+        }
+    }
+}
+```
+
+ผลการทดลอง
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture3_1.JPG?raw=true)
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture3_2.JPG?raw=true)
 
 
 
@@ -348,6 +493,42 @@ public class intergerTest
 9.	y%8
 10.	100*x+y%2-a
 ```
+
+```
+code
+```
+```
+using System;
+namespace thruthTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = 10, b = 20, x = 5, y = 2;
+            Console.WriteLine("Answer a + b = " + (a + b));
+            Console.WriteLine("Answer x - b = " + (x - b));
+            Console.WriteLine("Answer x * b = " + (x * b));
+            Console.WriteLine("Answer y / a = " + (y / a));
+            Console.WriteLine("Answer b % y  = " + (b % y));
+            Console.WriteLine("Answer y + 10%x = " + (y + 10 % x));
+            Console.WriteLine("Answer a/3*5 = " + (a / 3 * 5));
+            Console.WriteLine("Answer 9/2*a = " + (9 / 2 * a));
+            Console.WriteLine("Answer y%8 = " + (y % 8));
+            Console.WriteLine("Answer 100*x+y%2-a = " + (100 * x + y % 2 - a));
+        }
+    }
+}
+```
+
+ผลการทดลอง
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture4.JPG?raw=true)
+
+
+
+
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
 
@@ -403,7 +584,88 @@ Mars |	227,940,000 km	| 1.5229607479417 | 12.6913395661808
 Jupiter |	778,330,000 km	| 5.20034236617295 | 43.3361863847746	
 Uranus |	2,873,550,000 km | 19.1993676285332 | 159.994730237777		
 Neptune |	4,501,000,000 km | 30.0730294221531 | 250.608578517943		
-Pluto |	5,945,900,000 km | 39.7269996981071 |	331.058330817559	
+Pluto |	5,945,900,000 km | 39.7269996981071 |	331.058330817559
+
+```
+code
+```
+```
+using System;
+namespace variableProperties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;
+            const double Astronomicalunit = 93000000d;
+            const double mileTokm = 1.609344;
+
+            Console.WriteLine("Mercury");
+            const double mercury = 57910000d;
+            Console.WriteLine("lengthtosun : {0} km", mercury / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (mercury / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((mercury / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Venus");
+            const double Venus = 108200000d;
+            Console.WriteLine("lengthtosun : {0} km", Venus / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Venus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Venus / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Earth");
+            const double Earth = 149600000d;
+            Console.WriteLine("lengthtosun : {0} km", Earth / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Earth / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Earth / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Mars");
+            const double Mars = 227940000d;
+            Console.WriteLine("lengthtosun : {0} km", Mars / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Mars / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Mars / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Jupiter");
+            const double Jupiter = 778330000d;
+            Console.WriteLine("lengthtosun : {0} km", Jupiter / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Jupiter / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Jupiter / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Uranus");
+            const double Uranus = 2873550000d;
+            Console.WriteLine("lengthtosun : {0} km", Uranus / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Uranus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Uranus / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Neptune");
+            const double Neptune = 4501000000d;
+            Console.WriteLine("lengthtosun : {0} km", Neptune / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Neptune / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Neptune / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+            Console.WriteLine("Pluto");
+            const double Pluto = 5945900000d;
+            Console.WriteLine("lengthtosun : {0} km", Pluto / mileTokm);
+            Console.WriteLine("Astronomical unit : {0} A.U.", (Pluto / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Pluto / mileTokm) / lightSpeed) / 60);
+            Console.WriteLine("**************************************************************************");
+
+        }
+    }
+}
+```
+
+
+
+![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture5.JPG?raw=true)
+
 
 ##คลาส Math 
 ในภาษา C# มีคลาสที่เป็นตัวช่วยคำนวณทางคณิตศาสตร์ ที่ช่วยให้เราสามารถคำนวณฟังก์ชันพื้นฐานได้ อย่างรวดเร็ว ไม่ต้องพัฒนาโปรแกรมเพิ่มเติมด้วยเอง นั่นคือคลาส Math  ฟังก์ชันทางคณิตศาสตร์ที่ใช้บ่อยๆ สามารถดูรายละเอียดทั้งหมดได้จาก 
