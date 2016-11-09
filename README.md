@@ -150,6 +150,9 @@ namespace variableProperties
 ![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture1_1.JPG?raw=true)
 ![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture1_2.JPG?raw=true)
 ![](https://github.com/patimakorn54/LAB-07/blob/master/Picture/Capture1_3.JPG?raw=true)
+
+
+
 **หมายเหตุ**
  
 ชนิดข้อมูล ```bool``` เก็บข้อมูลได้เฉพาะ ```true``` และ ```false``` ไม่ต้องหา ```MinValue``` และ ```MaxValue```
